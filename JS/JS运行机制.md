@@ -173,3 +173,37 @@ console.log(8)
 
 如此反复，无穷无尽……
 ```
+
+### 小记关于ajax异步请求
+
+感觉有点类似于一个宏任务，但是会由于网速快慢导致ajax和其他宏任务的执行顺序产生变化。但一定会在微任务之后执行。
+
+再来个例子
+
+```
+async function f3() {
+        p = await 18;
+        console.log(1);
+}
+
+f3();
+
+console.log(2);
+
+let xhr = new XMLHttpRequest;
+xhr.open('GET','***');
+xhr.onreadystatechange = () =>{
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log(3);
+    }
+};
+
+xhr.send();
+
+setTimeout(() => {
+    console.log(4);
+});
+
+console.log(5);
+```
+运行结果可能是 2 5 1 4 3 或者2 5 1 3 4
