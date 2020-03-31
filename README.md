@@ -11,5 +11,6 @@
 ### JavaScript
 
 1. [JavaScript运行机制](https://github.com/hzq8147/FE_Notes/blob/master/JS/JS%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.md)
+2. [解构](https://github.com/hzq8147/FE_Notes/blob/master/JS/%E8%A7%A3%E6%9E%84.md)
 
 ### Interview
