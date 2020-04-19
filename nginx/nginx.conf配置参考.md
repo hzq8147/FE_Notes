@@ -1,11 +1,10 @@
 # **nginx.conf配置参考**
 
-niconiworks.cn/sb 会匹配location /sb 进入404
+`niconiworks.cn/sb` 会匹配`location /sb` 进入404
 
-/sakura 会匹配到location /sakura 进入
+`/sakura` 会匹配到`location /sakura` 进入
 
-其他 /sbdflk /sakuralkjfd 和其他/abc 好像都会匹配到 location /  302重定向到/sakura 
-
+其他 `/sbdflk` `/sakuralkjfd` 和其他`/abc` 好像都会匹配到 `location /`然后302重定向到/sakura 
 
 ```
 server {
