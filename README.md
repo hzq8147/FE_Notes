@@ -14,3 +14,6 @@
 2. [解构](https://github.com/hzq8147/FE_Notes/blob/master/JS/%E8%A7%A3%E6%9E%84.md)
 
 ### Interview
+
+### Nginx
+1.[Nginx配置参考](https://github.com/hzq8147/FE_Notes/blob/master/nginx/nginx.conf%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md)
