@@ -16,4 +16,13 @@
 ### Interview
 
 ### Nginx
+
 1.[Nginx配置参考](https://github.com/hzq8147/FE_Notes/blob/master/nginx/nginx.conf%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md)
+
+### Framework
+
+1.[虚拟DOM](https://github.com/hzq8147/FE_Notes/blob/master/framework/%E8%99%9A%E6%8B%9FDOM.md)
+
+### Daily
+
+* [日常记录](https://github.com/hzq8147/FE_Notes/blob/master/daily/daily.md)
