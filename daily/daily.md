@@ -20,3 +20,6 @@ DOM方法 addEventListener() 和 removeEventListener()是用来分配和删除�
 
 * 源码中未使用`export default`导出默认输出时 ，不能直接使用`import obj from '**'` 要使用{}解构进行导入
 
+### 2020-08-03
+
+import 引用进来的资源是个number  ---> assetsId
