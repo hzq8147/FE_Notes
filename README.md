@@ -15,6 +15,8 @@
 
 ### Interview
 
+1.[前端基础知识点整理](https://github.com/hzq8147/FE_Notes/blob/master/Interview/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86.md)
+
 ### Nginx
 
 1.[Nginx配置参考](https://github.com/hzq8147/FE_Notes/blob/master/nginx/nginx.conf%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md)
