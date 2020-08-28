@@ -1,6 +1,6 @@
 # webpack
 
-**为什么需要构建工具**
+## 什么需要构建工具
 
 ```
 ·转换ES6语法  部分浏览器ES6的特性不支持
@@ -9,29 +9,29 @@
 ·压缩混淆	隐藏代码逻辑 使代码逻辑不再明显 
 ·图片压缩
 ```
- 
+
 parcel rollup
 
-**webpack优势**
+## ebpack优势
 
 JavaScript 更新迭代快 配置灵活 插件化扩展
 
-**配置文件名称**
+## 置文件名称
 
 ```
 webpack.config.js
 webpack --config 选择配置文件
 ```
 
-**webpack 配置组成**
+## webpack 配置组成 
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gh4adom7jwj31bq0u04qp.jpg)
 
-**常用的plugin 及功能**
+## 常用的plugin 及功能
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ghcdzqllxjj310t0u0159.jpg)
 
-**mode**
+## mode
 
 Mode用来指定当前的构建环境 production development none
 
@@ -40,7 +40,7 @@ Mode用来指定当前的构建环境 production development none
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ghceb1qud3j31vs0u0dwh.jpg)
 
 
-**解析ES6**
+## 解析ES6
 
 使用babel-loader 解析js的ES6语法   要.babelrc配置文件
 
@@ -55,7 +55,7 @@ Mode用来指定当前的构建环境 production development none
 }
 ```
 
-**解析CSS**
+## 解析CSS
 
 css-loader 用于加载.css 文件 并将其转化成commonjs对象
 
@@ -76,7 +76,7 @@ module:{
     }
 ```
 
-**资源解析:解析图片、 字体**
+## 资源解析:解析图片、 字体
 
 使用file-loader
 
@@ -98,13 +98,13 @@ module:{
 }
 ```
 
-**webpack文件监听**
+## webpack文件监听
 
 webpack --watch 
 
 缺陷： 浏览器不会随着刷新
 
-**webpack-dev-server 实现热更新**
+## webpack-dev-server 实现热更新
 
 WDS不刷新浏览器
 
@@ -116,7 +116,7 @@ WDS不输出文件 存在内存中
 webpack-dev-server --open //--open代表打开浏览器
 ```
 
-**webpack-dev-middleware传输给服务器**
+## webpack-dev-middleware传输给服务器
 
 ```
 const express = require('express');
@@ -136,7 +136,7 @@ console.log('Example app listening on port 3000');
 });
 ```
 
-**webpack 热更新原理**
+## webpack 热更新原理
 
 Webpack Compile: 将JS编译成bundle
 
@@ -152,7 +152,7 @@ HMR Runtime ： 会被注入到了浏览器 更新文件的变化
 
 文件系统 有变化之后，再通过Compiler编译 发送给HMR server ，HMR server知道哪些源代码和模块发生了变化，HMR server（服务端）通知HMR runtime（客户端）哪些文件发生变化（通过JSON进行传输。RUNTIME就会更新代码不需要刷新浏览器。
 
-**文件指纹**
+## 文件指纹
 
 打包输出的文件名的后缀 方便版本管理
 
@@ -170,7 +170,7 @@ file-loader css-loader ……都是可以通过options: { name: }
 
 MiniCssExtractPlugin 以文件方式提取css到dist 与style-loader 冲突 替换为MiniCSSExtractPlugin.loader
 
-**代码压缩**
+## 代码压缩
 
 
 
