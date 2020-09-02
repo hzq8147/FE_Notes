@@ -12,7 +12,7 @@
 
 parcel rollup
 
-## ebpack优势
+## webpack优势
 
 JavaScript 更新迭代快 配置灵活 插件化扩展
 
