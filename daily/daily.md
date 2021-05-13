@@ -98,3 +98,19 @@ YES
 ```
 
 因为 async.html 中 script.js 体积更小下载更快，所以执行时间也比从 CDN 加载的 lodash 更早，所以 _.VERSION 上不可用，输出 Lodash Not Available；而 defer.html 中的 script.js 下载完毕后并不立即执行，而是在 lodash 下载和执行之后才执行
+
+2021-04-10
+
+z-index 只会在absolute relative 和fixed中生效。
+
+如果父元素没有position（即使有zindex也不生效），那么子组件(position:fixed)会按照自己的z-index和外面的元素（与父组件同级的有zindex和fixed的元素）比较zindex。
+
+如果父元素有position:fixed，会优先采用父组件的zindex和外面比较，如果小了，即便子元素zindex大也会被覆盖。
+
+```
+<div class="parent1">
+	<div class="child1"></div>
+</div>
+<div class="parent2">
+</div>
+```
