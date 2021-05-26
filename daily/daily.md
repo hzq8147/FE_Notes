@@ -99,7 +99,7 @@ YES
 
 因为 async.html 中 script.js 体积更小下载更快，所以执行时间也比从 CDN 加载的 lodash 更早，所以 _.VERSION 上不可用，输出 Lodash Not Available；而 defer.html 中的 script.js 下载完毕后并不立即执行，而是在 lodash 下载和执行之后才执行
 
-2021-04-10
+###2021-04-10
 
 z-index 只会在absolute relative 和fixed中生效。
 
@@ -114,3 +114,45 @@ z-index 只会在absolute relative 和fixed中生效。
 <div class="parent2">
 </div>
 ```
+
+###2021-05-21
+
+####AST
+
+抽象语法树
+
+一个FunctionDeclaration(函数定义)对象。
+
+用力拆开，它成了三块：
+
+1. 一个id，就是它的名字，即add
+
+2. 两个params，就是它的参数，即[a, b]
+
+3. 一块body，也就是大括号内的一堆东西
+
+####postCss
+
+工作中用到的框架 css 处理有以下问题，需要用 postcss 做些自动处理。
+
+同名 class 后者会覆盖前者：`.a{color: #fff} .a{background: #fff}`，后者生效
+
+最多嵌套两层：`.a .b .c {}`不生效
+
+从其名字 postcss 可以看出早期是被当做后处理器的。也就是处理less/sass 编译后的 css。最常用的插件就是 autoprefixer，根据浏览器版本添加兼容前缀。
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqq0gvz4xpj30fs06djra.jpg)
+
+工作流程
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqq3gxzjqgj30ej0aqmxa.jpg)
+
+大致步骤：
+
+1. 将 CSS 字符串生成 Tokens
+
+2. 将 Tokens 通过规则生成 AST 树
+
+3. 将 AST 树传给插件进行处理
+
+4. 将处理后的 AST 树生成新的css资源（包括css字符串、sourceMap等）
