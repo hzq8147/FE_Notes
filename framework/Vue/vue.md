@@ -17,3 +17,19 @@ info:{
 ```
 4.
 ![](https://tva1.sinaimg.cn/large/008eGmZEgy1gme2e26bcwj30wa0j6q4k.jpg)
+
+### computed 计算
+
+1. 只有响应式的数据才能触发值更新
+2. 有缓存机制 响应式数据没变化就不会重复执行
+
+### 生命周期
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gw7w2sr0obj313m0u0acu.jpg)
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gw7w4aqsurj316c0oo779.jpg)
+
+### 函数式组件
+
+1. functional: true
+2. 
